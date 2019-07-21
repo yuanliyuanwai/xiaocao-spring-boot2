@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
+import in.xiaocao.MyBatisPlusApplication;
 import in.xiaocao.mapper.UserMapper;
 import in.xiaocao.model.User;
 
@@ -21,7 +22,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = MyBatisPlusApplication.class)
 public class MyBatisPlusTest {
 
     @Autowired
