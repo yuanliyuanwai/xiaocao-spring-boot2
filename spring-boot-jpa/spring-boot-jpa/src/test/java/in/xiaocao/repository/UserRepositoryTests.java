@@ -1,5 +1,10 @@
 package in.xiaocao.repository;
 
+import java.text.DateFormat;
+import java.util.Date;
+
+import javax.annotation.Resource;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,11 +14,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import in.xiaocao.model.User;
-import in.xiaocao.repository.UserRepository;
-
-import javax.annotation.Resource;
-import java.text.DateFormat;
-import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

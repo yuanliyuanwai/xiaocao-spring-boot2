@@ -1,24 +1,17 @@
 package in.xiaocao.repository;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import in.xiaocao.model.Address;
-import in.xiaocao.model.User;
 import in.xiaocao.model.UserDetail;
 import in.xiaocao.model.UserInfo;
-import in.xiaocao.repository.AddressRepository;
-import in.xiaocao.repository.UserDetailRepository;
-
-import javax.annotation.Resource;
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -41,9 +34,6 @@ public class UserDetailRepositoryTests {
 
 	@Test
 	public void testSaveUserDetail() {
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
-		String formattedDate = dateFormat.format(date);
 		UserDetail userDetail=new UserDetail();
 		userDetail.setUserId(3L);
 		userDetail.setHobby("吃鸡游戏");
