@@ -38,9 +38,9 @@ public class MyBatisPlusTest {
     @Test
     public void testInsert() {
         User user = new User();
-        user.setName("xiaocao");
-        user.setAge(3);
-        user.setEmail("wanzhengchong@163.com");
+        user.setName("laowan");
+        user.setAge(100);
+        user.setEmail("laowan@163.com");
         assertThat(userMapper.insert(user)).isGreaterThan(0);
         // 成功直接拿会写的 ID
         assertThat(user.getId()).isNotNull();
@@ -50,14 +50,14 @@ public class MyBatisPlusTest {
     public void testDelete() {
         assertThat(userMapper.deleteById(3L)).isGreaterThan(0);
         assertThat(userMapper.delete(new QueryWrapper<User>()
-                .lambda().eq(User::getName, "smile"))).isGreaterThan(0);
+                .lambda().eq(User::getName, "xiaocao"))).isGreaterThan(0);
     }
 
     @Test
     public void testUpdate() {
         User user = userMapper.selectById(2);
         assertThat(user.getAge()).isEqualTo(36);
-        assertThat(user.getName()).isEqualTo("keep");
+        assertThat(user.getName()).isEqualTo("jeny");
 
         userMapper.update(
                 null,
