@@ -9,9 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import in.xiaocao.model.User;
 import in.xiaocao.repository.UserRepository;
 
-/**
- * Created by summer on 2017/5/5.
- */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserRepositoryTest {
